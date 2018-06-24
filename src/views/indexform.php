@@ -18,20 +18,20 @@
 			  		<div class="form-group">
 						<label for="sel1">Tipo de cuenta con el cual desea realizar el pago:</label>
 						<select class="form-control" id="sel1">
-							<option>Persona</option>
-							<option>Empresa</option>
+							<option value="0">Persona</option>
+							<option value="1">Empresa</option>
 						</select>
 					</div>
 					<div><?php 
-					session_start();
-					include_once "..\model\basicmodels.php";
+					include_once ROOT."model".DS."basicmodels.php";
+					include_once ROOT."model".DS."modeltransaction.php";
 
-					$url = "https://test.placetopay.com/soap/pse/?wsdl";
+					$url = URLPSE;
 					#Llave​ ​transacciona
-					$tranKey = "";
+					$tranKey = TRANKEY;
 					$dataauth = new Authentication;
 					#Identificador
-					$dataauth->login = "";
+					$dataauth->login = LOGIN;
 					$dataauth->seed = "s";
 					$key = sha1($dataauth->seed . $tranKey,false);
 					$dataauth->tranKey = $key;

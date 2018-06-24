@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Pago PSE</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row justify-content-md-center">
+			<div class="col-md-6 col text-center">
+				<h1>Pago</h1>
+			</div>
+		</div>
+	 	<form action="?makepay" method="POST">
+	 	<div class="row">	 	
+			<div class="form-group  col-md-4">
+			  <label for="total_id">Valor a pagar:</label>
+			  <input type="" class="form-control" id="total_id">  
+			</div>
+	  		<div class="form-group col-md-4">
+				<label for="document_type_id">Tipo de documento:</label> 
+				<select class="form-control" id="document_type_id">
+					<option>Seleccione...</option>
+					<option value="CC">Cédula de ciudanía colombiana</option>
+					<option value="CE">Cédula de extranjería</option>
+					<option value="TI">Tarjeta de identidad</option>
+					<option value="PPN">Pasaporte</option>
+				</select>  
+			</div>
+			<div class="form-group col-md-4">
+			  <label for="document_id">Número de documento:</label>
+			  <input type="" class="form-control" id="document_id">  
+			</div>
+	 	</div>
+	 		<div class="row">
+	 			<div class="form-group col-md-6">
+				  <label for="name_id">Nombre:</label>
+				  <input type="" class="form-control" id="name_id">  
+				</div>
+				<div class="form-group col-md-6">
+				  <label for="last_name_id">Apellido:</label>
+				  <input type="" class="form-control" id="last_name_id">  
+				</div>
+	 		</div>
+			<div class="row">
+				<div class="form-group col-md-4">
+				  <label for="company_id">Compañia:</label>
+				  <input type="" class="form-control" id="company_id">  
+				</div>
+				<div class="form-group col-md-4">
+				  <label for="email_id">Correo Electrónico:</label>
+				  <input type="" class="form-control" id="email_id">  
+				</div>
+				<div class="form-group col-md-4">
+				  <label for="addres_id">Dirección:</label>
+				  <input type="" class="form-control" id="addres_id">  
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group col-md-4">
+				  <label for="city_id">Ciudad:</label>
+				  <input type="" class="form-control" id="city_id">  
+				</div>
+				<div class="form-group col-md-4">
+				  <label for="department_id">Departamento:</label>
+				  <input type="" class="form-control" id="department_id">  
+				</div>					
+				<div class="form-group col-md-4">
+				  <label for="country_id">País:</label>
+				  <input type="" class="form-control" id="country_id">  
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-group col-md-4">
+				  <label for="phone_id">Teléfono fijo:</label>
+				  <input type="" class="form-control" id="phone_id" >  
+				</div>
+				<div class="form-group col-md-4">
+				  <label for="cellphone_id">Teléfono celular:</label>
+				  <input type="" class="form-control" id="cellphone_id" ">  
+				</div>			
+			</div>
+			<div class="row justify-content-md-center">
+		  		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#confirmData">Pagar</button>
+		  	</div>
+
+			
+			<div class="modal fade" id="confirmData" tabindex="-1" role="dialog" aria-labelledby="confirmDataLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="confirmDataLabel">Confirmar transacción</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+					...
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+						<button type="submit" class="btn btn-primary">Pagar</button>
+					</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+ </body>
+</html>

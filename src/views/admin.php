@@ -14,10 +14,10 @@
 		<div class="row justify-content-md-center">
 			<div class="col-md-6 col">
 				<h1>Adminitracion de pagos</h1>
-			 	<form action="../controller/configpayout.php" method="POST">
+			 	<form action="?config" method="POST">
 			  		<div class="form-group">
 					  <label for="languaje_id">Lenguaje con el cual desea recibir sus pago:</label>
-					  <select class="form-control" id="languaje_id" name="languaje">
+					  <select class="form-control" id="languaje_id" name="language">
 						<option value="ES">Español</option>
 						<option value="EN">Ingles</option>
 					  </select>
@@ -31,7 +31,7 @@
 					</div>
 					<div class="form-group">
 						<label for="tax_id">Porcentaje de impuesto de sus pagos:</label>
-						<select class="form-control" id="tax_id" name="tax">
+						<select class="form-control" id="tax_id" name="percent_tax_amount">
 							<?php for($i=0;$i <= 100 ;$i= $i+10){ ?>
 								<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
 							<?php } ?>
@@ -39,7 +39,7 @@
 					</div>
 					<div class="form-group">
 						<label for="devolution_id">Porcentaje de devolución base de sus pagos:</label>
-						<select class="form-control" id="devolution_id" name="devolution">
+						<select class="form-control" id="devolution_id" name="percent_devolution_base">
 							<?php for($i=0;$i <= 100 ;$i= $i+10){ ?>
 								<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
 							<?php } ?> 
