@@ -16,23 +16,25 @@
 				<h1>Paga con nosotros</h1>
 			 	<form action="/action_page.php">
 			  		<div class="form-group">
-					  <label for="sel1">Tipo de cuenta con el cual desea realizar el pago:</label>
-					  <select class="form-control" id="sel1">
-					    <option>Persona</option>
-					    <option>Empresa</option>
-					  </select>
+						<label for="sel1">Tipo de cuenta con el cual desea realizar el pago:</label>
+						<select class="form-control" id="sel1">
+							<option>Persona</option>
+							<option>Empresa</option>
+						</select>
 					</div>
 					<div><?php 
 					session_start();
 					include_once "..\model\basicmodels.php";
 
 					$url = "https://test.placetopay.com/soap/pse/?wsdl";
-					$tranKey = "024h1IlD";					
-					$key = sha1("c" . $tranKey,false);
+					#Llave​ ​transacciona
+					$tranKey = "";
 					$dataauth = new Authentication;
-					$dataauth->login = "6dd490faf9cb87a9862245da41170ff2";
+					#Identificador
+					$dataauth->login = "";
+					$dataauth->seed = "s";
+					$key = sha1($dataauth->seed . $tranKey,false);
 					$dataauth->tranKey = $key;
-					$dataauth->seed = "c";
 					$dataauth->additional = array();
 					$arrayauth = array('auth' => $dataauth);
 					try {
@@ -44,12 +46,12 @@
 					}
 					?></div>
 					<div class="form-group">
-					  <label for="sel1">Banco con el cual desea realizar el pago:</label>
-					  <select class="form-control" id="sel1">
-					  <?php for($i=1;$i< count($banks);$i++){ ?>
-						<option value="<?php echo $banks[$i]->bankName; ?>"><?php echo $banks[$i]->bankName; ?></option> 
-						<?php } ?> 
-					  </select>
+						<label for="sel1">Banco con el cual desea realizar el pago:</label>
+						<select class="form-control" id="sel1">
+							<?php for($i=1;$i< count($banks);$i++){ ?>
+							<option value="<?php echo $banks[$i]->bankName; ?>"><?php echo $banks[$i]->bankName; ?></option>
+							<?php } ?> 
+						</select>
 					</div>
 					<div class="row justify-content-md-center">
 				  		<button type="submit" class="btn btn-primary">Pagar</button>
