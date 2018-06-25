@@ -20,11 +20,11 @@
 	 	<div class="row">	 	
 			<div class="form-group  col-md-4">
 			  <label for="total_id">Valor a pagar:</label>
-			  <input type="" class="form-control" id="total_id">  
+			  <input type="" class="form-control" id="total_id" name="total">  
 			</div>
 	  		<div class="form-group col-md-4">
 				<label for="document_type_id">Tipo de documento:</label> 
-				<select class="form-control" id="document_type_id">
+				<select class="form-control" id="document_type_id" name="documentType">
 					<option>Seleccione...</option>
 					<option value="CC">Cédula de ciudanía colombiana</option>
 					<option value="CE">Cédula de extranjería</option>
@@ -34,55 +34,55 @@
 			</div>
 			<div class="form-group col-md-4">
 			  <label for="document_id">Número de documento:</label>
-			  <input type="" class="form-control" id="document_id">  
+			  <input type="" class="form-control" id="document_id" name="document">  
 			</div>
 	 	</div>
 	 		<div class="row">
 	 			<div class="form-group col-md-6">
 				  <label for="name_id">Nombre:</label>
-				  <input type="" class="form-control" id="name_id">  
+				  <input type="" class="form-control" id="name_id" name="firstName">  
 				</div>
 				<div class="form-group col-md-6">
 				  <label for="last_name_id">Apellido:</label>
-				  <input type="" class="form-control" id="last_name_id">  
+				  <input type="" class="form-control" id="last_name_id" name="lastName">  
 				</div>
 	 		</div>
 			<div class="row">
 				<div class="form-group col-md-4">
 				  <label for="company_id">Compañia:</label>
-				  <input type="" class="form-control" id="company_id">  
+				  <input type="" class="form-control" id="company_id" name="company">  
 				</div>
 				<div class="form-group col-md-4">
 				  <label for="email_id">Correo Electrónico:</label>
-				  <input type="" class="form-control" id="email_id">  
+				  <input type="" class="form-control" id="email_id" name="emailAddress">  
 				</div>
 				<div class="form-group col-md-4">
 				  <label for="addres_id">Dirección:</label>
-				  <input type="" class="form-control" id="addres_id">  
+				  <input type="" class="form-control" id="addres_id" name="address">  
 				</div>
 			</div>
 			<div class="row">
 				<div class="form-group col-md-4">
 				  <label for="city_id">Ciudad:</label>
-				  <input type="" class="form-control" id="city_id">  
+				  <input type="" class="form-control" id="city_id" name="city">  
 				</div>
 				<div class="form-group col-md-4">
 				  <label for="department_id">Departamento:</label>
-				  <input type="" class="form-control" id="department_id">  
+				  <input type="" class="form-control" id="department_id" name="province">  
 				</div>					
 				<div class="form-group col-md-4">
 				  <label for="country_id">País:</label>
-				  <input type="" class="form-control" id="country_id">  
+				  <input type="" class="form-control" id="country_id" name="country">  
 				</div>
 			</div>
 			<div class="row">
 				<div class="form-group col-md-4">
 				  <label for="phone_id">Teléfono fijo:</label>
-				  <input type="" class="form-control" id="phone_id" >  
+				  <input type="" class="form-control" id="phone_id" name="phone">  
 				</div>
 				<div class="form-group col-md-4">
 				  <label for="cellphone_id">Teléfono celular:</label>
-				  <input type="" class="form-control" id="cellphone_id" ">  
+				  <input type="" class="form-control" id="cellphone_id" name="mobile">  
 				</div>			
 			</div>
 			<div class="row justify-content-md-center">
@@ -100,7 +100,46 @@
 						</button>
 					</div>
 					<div class="modal-body">
-					...
+						<div class="row">
+							<label for="total_id" class="col-md-2">Valor a pagar:</label>
+							<span class="col-md-4"></span>
+							<label for="document_type_id" class="col-md-2">Tipo de documento:</label> 
+							<span class="col-md-4"></span>
+						</div>
+						<div class="row">
+							<label for="document_id" class="col-md-2">Número de documento:</label>
+							<span class="col-md-4"></span>
+							<label for="name_id" class="col-md-2">Nombre:</label>
+							<span class="col-md-4"></span>
+						</div>
+						<div class="row">
+							<label for="last_name_id" class="col-md-2">Apellido:</label>
+							<span class="col-md-4"></span>
+							<label for="company_id" class="col-md-2">Compañia:</label>
+							<span class="col-md-4"></span>
+						</div>
+						<div class="row">
+							<label for="email_id" class="col-md-2">Correo Electrónico:</label>
+							<span class="col-md-4"></span>
+							<label for="addres_id" class="col-md-2">Dirección:</label>
+							<span class="col-md-4"></span>
+						</div>
+						<div class="row">
+							<label for="city_id" class="col-md-2">Ciudad:</label>
+							<span class="col-md-4"></span>
+							<label for="department_id" class="col-md-2">Departamento:</label>
+							<span class="col-md-4"></span>
+						</div>
+						<div class="row">
+							<label for="country_id" class="col-md-2">País:</label>
+							<span class="col-md-4"></span>
+							<label for="phone_id" class="col-md-2">Teléfono fijo:</label>
+							<span class="col-md-4"></span>
+						</div>
+						<div class="row">							
+							<label for="cellphone_id" class="col-md-2">Teléfono celular:</label>
+							<span class="col-md-4"></span>
+						</div>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>

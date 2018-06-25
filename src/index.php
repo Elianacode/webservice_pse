@@ -19,7 +19,7 @@
 		require_once ROOT.'controller'.DS."controllerBank.php";
 	}else if(isset($_GET['makepay'])){
 		require_once ROOT.'controller'.DS."controllerBank.php";
-	}else{		
+	}else{
 		require_once BASEPATH . "validateconfig.php";
 	}
 

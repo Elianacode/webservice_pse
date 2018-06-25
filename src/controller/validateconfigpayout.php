@@ -16,7 +16,8 @@
 			$db = $database->getConnection();
 
 			$config = new Config($db);
-			if(($config->read()) > 0){
+			$cont =  $config->read();
+			if($cont){
 			    return true;
 			}else{
 				return false;
